@@ -103,7 +103,7 @@ fn main() -> ! {
                 is_pressed = false;
             }
 
-            timer_register.sr().modify(|_, w| w.cc1if().clear_bit());
+            counter.clear_interrupt(Event::C1);
         }
     }
 }
